@@ -1,0 +1,5 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "kestrel")(type "KiCad")(uri "${KIPRJMOD}/lib/kestrel.kicad_sym")(options "")(descr "Kestrel parts"))
+	(lib (name "kestrel_easyeda")(type "KiCad")(uri "${KIPRJMOD}/lib/easyeda/kestrel_easyeda.kicad_sym")(options "")(descr "Parts converted from EasyEDA"))
+)

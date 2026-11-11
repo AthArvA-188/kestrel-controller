@@ -1,0 +1,5 @@
+dependencies:
+  idf: ">=5.1"
+  # usb_dev.c uses the 0.21 class driver interface, which earlier and later
+  # releases change. dependencies.lock records the exact build.
+  espressif/tinyusb: "~0.21.0"

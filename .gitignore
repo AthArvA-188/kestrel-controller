@@ -1,0 +1,27 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# PlatformIO and ESP-IDF build products
+.pio/
+build/
+managed_components/
+sdkconfig
+sdkconfig.old
+
+# KiCad local state
+*.kicad_prl
+*-backups/
+fp-info-cache
+*.lck
+
+# Autorouter scratch files and intermediate reports
+hardware/out/route/
+hardware/out/route3/
+hardware/out/drc-placement.json
+mech/out/build.log
+
+# OS
+Thumbs.db
+.DS_Store

@@ -1,0 +1,92 @@
+{
+  "mcu": "ESP32-S3-WROOM-1-N16R2 (16 MB flash, 2 MB quad PSRAM, GPIO35-37 free)",
+  "gpio": {
+    "0": {"net": "BOOT", "dir": "in", "note": "Strapping pin. Tact switch to GND, 10k pull-up. Hold at reset for ROM download mode."},
+    "1": {"net": "STICK_LX", "dir": "adc", "adc": "ADC1_CH0"},
+    "2": {"net": "STICK_LY", "dir": "adc", "adc": "ADC1_CH1"},
+    "3": {"net": "TP_GPIO3", "dir": "nc", "note": "Strapping pin, test pad only."},
+    "4": {"net": "STICK_RX", "dir": "adc", "adc": "ADC1_CH3"},
+    "5": {"net": "STICK_RY", "dir": "adc", "adc": "ADC1_CH4"},
+    "6": {"net": "TRIG_L_POS", "dir": "adc", "adc": "ADC1_CH5"},
+    "7": {"net": "TRIG_R_POS", "dir": "adc", "adc": "ADC1_CH6"},
+    "8": {"net": "TRIG_L_ISEN", "dir": "adc", "adc": "ADC1_CH7", "note": "0.2 ohm sense resistor, 0.2 V per amp, 1k/100n filter."},
+    "9": {"net": "TRIG_R_ISEN", "dir": "adc", "adc": "ADC1_CH8", "note": "0.2 ohm sense resistor, 0.2 V per amp, 1k/100n filter."},
+    "10": {"net": "LCD_CS", "dir": "out"},
+    "11": {"net": "LCD_MOSI", "dir": "out"},
+    "12": {"net": "LCD_SCLK", "dir": "out"},
+    "13": {"net": "LCD_DC", "dir": "out"},
+    "14": {"net": "LCD_RST", "dir": "out"},
+    "15": {"net": "BTN_HOME", "dir": "in", "note": "Active low, 10k pull-up to 3V3. RTC pin, wakes the MCU from deep sleep."},
+    "16": {"net": "LED_DATA", "dir": "out", "note": "SK6812 chain, 24 LEDs, through a 330 ohm series resistor."},
+    "17": {"net": "RUMBLE_L", "dir": "out", "note": "PWM, active high, low-side N-FET, 100k gate pull-down."},
+    "18": {"net": "RUMBLE_R", "dir": "out", "note": "PWM, active high, low-side N-FET, 100k gate pull-down."},
+    "19": {"net": "USB_DM", "dir": "usb"},
+    "20": {"net": "USB_DP", "dir": "usb"},
+    "21": {"net": "LCD_BL", "dir": "out", "note": "PWM, active high, to the display module's BL pin."},
+    "35": {"net": "SR_LOAD", "dir": "out", "note": "74HC165 SH/LD. Pulse low to latch, hold high to shift."},
+    "36": {"net": "SR_CLK", "dir": "out"},
+    "37": {"net": "SR_DATA", "dir": "in", "note": "QH of the first 74HC165 in the chain."},
+    "38": {"net": "TRIG_L_IN1", "dir": "out", "note": "DRV8833 AIN1, PWM."},
+    "39": {"net": "TRIG_L_IN2", "dir": "out", "note": "DRV8833 AIN2, PWM."},
+    "40": {"net": "TRIG_R_IN1", "dir": "out", "note": "DRV8833 BIN1, PWM."},
+    "41": {"net": "TRIG_R_IN2", "dir": "out", "note": "DRV8833 BIN2, PWM."},
+    "42": {"net": "FUEL_ALRT_N", "dir": "in", "note": "MAX17048 ALRT, open drain, 10k pull-up."},
+    "43": {"net": "UART0_TX", "dir": "out", "note": "Debug header."},
+    "44": {"net": "UART0_RX", "dir": "in", "note": "Debug header."},
+    "45": {"net": "PERIPH_EN", "dir": "out", "note": "Strapping pin, 100k pull-down. High enables the 3V3_PERIPH switch, the 3.0 V analogue LDO, and the LED rail switch."},
+    "46": {"net": "MOTOR_NSLEEP", "dir": "out", "note": "Strapping pin, 100k pull-down. High wakes the DRV8833."},
+    "47": {"net": "I2C_SDA", "dir": "io", "note": "4.7k pull-up to 3V3."},
+    "48": {"net": "I2C_SCL", "dir": "io", "note": "4.7k pull-up to 3V3."}
+  },
+  "shift_registers": {
+    "part": "74HC165, three in a chain on SPI3",
+    "read": "Pulse SR_LOAD low, then clock 24 bits. The first byte is SR1, then SR2, then SR3. Within each byte the first bit out is input H (bit 7) and the last is input A (bit 0).",
+    "polarity": "All inputs are active low with 10k pull-ups. A pressed button reads 0.",
+    "SR1": {"A": "BTN_A", "B": "BTN_B", "C": "BTN_X", "D": "BTN_Y", "E": "BTN_LB", "F": "BTN_RB", "G": "BTN_VIEW", "H": "BTN_MENU"},
+    "SR2": {"A": "DPAD_UP", "B": "DPAD_DOWN", "C": "DPAD_LEFT", "D": "DPAD_RIGHT", "E": "BTN_L3", "F": "BTN_R3", "G": "BTN_FN", "H": "BTN_LB_ALT"},
+    "SR3": {"A": "PADDLE_1", "B": "PADDLE_2", "C": "PADDLE_3", "D": "PADDLE_4", "E": "CHG_N", "F": "PGOOD_N", "G": "MOTOR_FAULT_N", "H": "BTN_RB_ALT"},
+    "bumper_note": "Each bumper micro switch has pad 1 on GND, pad 2 on BTN_LB or BTN_RB, and pad 3 on the matching _ALT input. Whichever pad is the switch's common terminal, one of the two inputs changes when the bumper is pressed. Firmware treats the bumper as pressed when the pair differs from its released state, which is captured at calibration."
+  },
+  "analog": {
+    "reference": "Sticks run from AVDD, a 3.0 V LDO. Trigger Hall sensors run from 3V3_PERIPH because the DRV5055 needs at least 3.0 V. Use ADC attenuation 12 dB for sticks and triggers and 0 dB for the two ISEN channels.",
+    "sticks": "TMR module outputs sit near AVDD/2 at rest. Calibrate centre and range per axis.",
+    "triggers": "DRV5055A4 linear Hall sensor, output near 1.65 V at zero field. Calibrate released and pulled values per trigger."
+  },
+  "i2c": {
+    "bus_speed_hz": 400000,
+    "devices": {"MAX17048": "0x36"}
+  },
+  "display": {
+    "controller": "ST7789",
+    "width": 320,
+    "height": 170,
+    "native": "170 x 320 portrait, RAM column offset 35",
+    "spi_mode": 0,
+    "spi_hz": 40000000,
+    "bus": "SPI2 (FSPI) on its native pins"
+  },
+  "leds": {
+    "type": "SK6812MINI, GRB, 800 kHz",
+    "count": 24,
+    "rail": "VSYS (3.3 to 4.4 V) through a load switch enabled by PERIPH_EN",
+    "chain": ["FN", "DPAD_SE", "DPAD_SW", "DPAD_NW", "DPAD_NE", "LRING_270", "LRING_210", "LRING_150", "LRING_90", "LRING_30", "LRING_330", "VIEW", "HOME", "MENU", "X", "Y", "B", "A", "RRING_30", "RRING_330", "RRING_270", "RRING_210", "RRING_150", "RRING_90"],
+    "current_limit_note": "Cap total LED current at 250 mA in firmware."
+  },
+  "power": {
+    "battery": "1S Li-Po, 3000 mAh",
+    "charger": "BQ24074, power path, input limit fixed at 500 mA so any USB port can supply it. CHG_N and PGOOD_N go to SR3.",
+    "rails": {"VSYS": "3.3 to 4.4 V from the BQ24074 OUT pin", "3V3": "TPS63001 buck-boost, always on", "3V3_PERIPH": "load switch from 3V3, on when PERIPH_EN is high", "AVDD": "3.0 V LDO from VSYS for the sticks, on when PERIPH_EN is high", "VLED": "load switch from VSYS, on when PERIPH_EN is high. Feeds the LEDs and both rumble motors"},
+    "sleep": "Deep sleep with PERIPH_EN low. BTN_HOME on GPIO15 wakes the MCU."
+  },
+  "connectors": {
+    "J_BAT": "JST-PH 2 pin: 1 BAT+, 2 GND",
+    "J_TRIG_L": "JST-SH 2 pin: trigger motor left (DRV8833 AOUT1, AOUT2)",
+    "J_TRIG_R": "JST-SH 2 pin: trigger motor right (DRV8833 BOUT1, BOUT2)",
+    "J_RUMBLE_L": "JST-SH 2 pin: 1 VLED, 2 FET drain",
+    "J_RUMBLE_R": "JST-SH 2 pin: 1 VLED, 2 FET drain",
+    "J_PADDLE_L": "JST-SH 3 pin: 1 PADDLE_1, 2 PADDLE_2, 3 GND",
+    "J_PADDLE_R": "JST-SH 3 pin: 1 PADDLE_3, 2 PADDLE_4, 3 GND",
+    "J_LCD": "JST GH 8 pin to the Waveshare 1.9inch LCD Module: 1 VCC (3V3_PERIPH), 2 GND, 3 DIN (LCD_MOSI), 4 CLK (LCD_SCLK), 5 CS, 6 DC, 7 RST, 8 BL",
+    "J_DEBUG": "1.27 mm header or pads: 3V3, GND, UART0_TX, UART0_RX, EN, BOOT"
+  }
+}

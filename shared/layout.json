@@ -1,0 +1,177 @@
+{
+  "units": "mm",
+  "frame": "Origin at the centre of the face. +X is the player's right. +Y points away from the player, toward the bumpers and the USB port. +Z points out of the face toward the player's eyes. Z=0 is the top surface of the main PCB.",
+  "body": {
+    "overall_width": 172.0,
+    "front_edge_y": 50.0,
+    "centre_rear_edge_y": -46.0,
+    "grip_tip_y": -80.0,
+    "face_z": 13.0,
+    "centre_bottom_z": -20.0,
+    "grip_bottom_z": -42.0,
+    "wall": 2.5,
+    "grip_note": "Grips are wider and fuller than an Xbox Series pad (153 mm overall). Target palm swell about 46 mm wide and 40 mm deep per grip."
+  },
+  "pcb": {
+    "thickness": 1.6,
+    "z_top": 0.0,
+    "outline": [[-62, 42], [62, 42], [67, 34], [67, -10], [58, -26], [42, -40], [-42, -40], [-58, -26], [-67, -10], [-67, 34]],
+    "mount_holes": {"drill": 2.2, "screw": "M2 self-tapping", "positions": [[-63, 27], [63, 27], [-50, -21], [50, -21], [-22, 38], [22, 38]]},
+    "max_height_top": 8.0,
+    "max_height_bottom": 3.4,
+    "tht_lead_protrusion_bottom": 2.0
+  },
+  "sticks": {
+    "left": [-46, 12],
+    "right": [26, -20],
+    "module": "ALPS RKJXV1224005-footprint TMR module, through-hole, with L3/R3 switch",
+    "module_envelope_from_axis": {"plus_x": 11.0, "minus_x": 7.0, "plus_y": 11.0, "minus_y": 11.5, "note": "Potentiometer housings sit on +X and +Y. The click switch sits on -Y."},
+    "pivot_z": 6.5,
+    "module_top_z": 10.5,
+    "shaft_top_z": 17.5,
+    "shaft": "4.0 mm with two flats (3.0 across flats)",
+    "max_tilt_deg": 25,
+    "turret_base_z": 18.0,
+    "tension_ring_top_z": 22.9,
+    "tension_ring_od": 27.8,
+    "glow_ring_inner_r": 15.4,
+    "glow_ring_outer_r": 18.0,
+    "cap_top_z": 32.0,
+    "cap_diameter": 19.0
+  },
+  "tension_mechanism": {
+    "summary": "Rotating the ring changes the preload of an auxiliary centring spring. A POM disc fixed to the stick stem sits under a spring-loaded POM plunger. Tilting the stick lifts the plunger with the disc edge, so restoring torque is spring force times disc radius.",
+    "disc_radius": 9.5,
+    "disc_top_z": 16.0,
+    "disc_thickness": 1.0,
+    "plunger_bore_radius": 7.5,
+    "plunger_outer_radius": 12.4,
+    "spring": "compression spring, 0.47 N/mm, mean diameter 23.6, 0.5 mm wire, free length 9.35",
+    "preload_travel": 2.0,
+    "ring_rotation_deg": 300,
+    "cam": "three-start helical ramp, lead 2.4 mm, with a detent every 30 degrees. Planned, not yet modelled in the CAD.",
+    "force_range_added_gf": [10, 46],
+    "module_baseline_gf": 55,
+    "max_spring_force_n": 1.2
+  },
+  "abxy": {
+    "centre": [46, 12],
+    "radius": 11.5,
+    "A": [46, 0.5],
+    "B": [57.5, 12],
+    "X": [34.5, 12],
+    "Y": [46, 23.5],
+    "cap_diameter": 10.5,
+    "cap_top_z": 15.5
+  },
+  "dpad": {
+    "centre": [-26, -20],
+    "style": "one-piece disc with a raised cross, rocks on a centre pivot",
+    "diameter": 27.0,
+    "top_z": 15.0,
+    "switch_radius": 8.5,
+    "UP": [-26, -11.5],
+    "DOWN": [-26, -28.5],
+    "LEFT": [-34.5, -20],
+    "RIGHT": [-17.5, -20]
+  },
+  "system_buttons": {
+    "VIEW": [-12, 0],
+    "HOME": [0, 0],
+    "MENU": [12, 0],
+    "FN": [0, -20],
+    "cap_diameter": 6.5,
+    "home_cap_diameter": 8.0,
+    "cap_top_z": 14.0
+  },
+  "tact_switch": {
+    "part": "C&K PTS645SM43SMTR92, 6 x 6 mm SMD, actuator top 4.3 mm above the PCB, 0.25 mm travel",
+    "used_for": ["A", "B", "X", "Y", "UP", "DOWN", "LEFT", "RIGHT", "VIEW", "HOME", "MENU", "FN"]
+  },
+  "display": {
+    "part": "Waveshare 1.9inch LCD Module: 1.9 inch IPS TFT, 170 x 320, ST7789V2, on a carrier board with an 8-pin 1.25 mm connector",
+    "orientation": "landscape, 320 wide",
+    "centre": [0, 18.5],
+    "outline": [51.2, 27.3],
+    "active": [42.72, 22.70],
+    "module_thickness": 5.0,
+    "module_z": [6.2, 11.2],
+    "lens": "1.0 mm PMMA, flush with the face",
+    "window": [43.5, 23.5],
+    "cable": "8-wire 1.25 mm cable from the back of the module, near its -X short edge, to a connector on the PCB top at [-14, 18.5]",
+    "pcb_connector_height": 4.3,
+    "verify": "Check the pocket and connector position against the Waveshare dimension drawing."
+  },
+  "bumpers": {
+    "switch": "D2FC-type micro switch, 12.8 x 5.8 x 6.5 mm body, through-hole, plunger up (+Z), operating point about Z=7.0",
+    "LB": [-46, 37],
+    "RB": [46, 37],
+    "switch_long_axis": "X",
+    "note": "Each bumper is a hinged lever that pushes the plunger down."
+  },
+  "triggers": {
+    "x_range_abs": [36, 68],
+    "pivot": {"y": 45.0, "z": -1.0, "axis": "X"},
+    "travel_deg": 22,
+    "hall_sensor_bottom_side": {"LT": [-56, 37], "RT": [56, 37], "note": "Linear Hall sensor on the PCB bottom. A 3 x 3 x 2 mm N42 magnet on an arm behind the trigger pivot rises toward the sensor as the trigger is pulled and ends about 2 mm below it at full pull."},
+    "actuator": {
+      "summary": "DualSense-style. A small DC motor turns a single-start worm. The worm drives a 20-tooth sector with an integral stop arm. The arm bears on a tab on the trigger. The worm is self-locking, so the arm holds position with no current.",
+      "motor": "N20-size bare DC motor, 10 x 12 x 15 mm body, 1.0 mm shaft, 3.7 V, lying along X with the worm on the outboard end",
+      "worm": "module 0.5, single start, about 6 mm OD, 10 mm long",
+      "wheel": "module 0.5, 20 teeth, used as a sector",
+      "envelope": {"x_abs": [34, 66], "y": [8, 36], "z": [-18, -6]}
+    }
+  },
+  "paddles": {
+    "switch": "D2FC-type micro switch, wired to the main PCB",
+    "P1_upper_left": [-58, -30],
+    "P2_lower_left": [-62, -52],
+    "P3_upper_right": [58, -30],
+    "P4_lower_right": [62, -52],
+    "note": "On the back of the grips where the middle and ring fingers rest. Positions are starting points and may move to suit the shell."
+  },
+  "rumble": {
+    "motor": "cylindrical ERM, about 10 mm diameter x 25 mm, one per grip",
+    "left": [-68, -45],
+    "right": [68, -45]
+  },
+  "battery": {
+    "part": "1S Li-Po 104060, 3000 mAh, with protection board and JST-PH lead",
+    "size": [60, 40, 10],
+    "centre": [0, 6],
+    "z": [-16.5, -6.5]
+  },
+  "usb_c": {"centre_x": 0, "edge_y": 42, "side": "top", "opening_z": [0.0, 3.3]},
+  "esp32_module": {"side": "bottom", "centre": [-1.5, -27.25], "size": [18.0, 25.5, 3.2], "antenna_edge_y": -40, "keepout": "No metal, battery, or screws within 12 mm of the antenna end."},
+  "leds": {
+    "part": "SK6812MINI 3535 RGB, top side, firing up",
+    "offset_from_switch": 5.5,
+    "chain": [
+      {"index": 0, "name": "FN", "xy": [0, -14.5]},
+      {"index": 1, "name": "DPAD_SE", "xy": [-19, -27]},
+      {"index": 2, "name": "DPAD_SW", "xy": [-33, -27]},
+      {"index": 3, "name": "DPAD_NW", "xy": [-33, -13]},
+      {"index": 4, "name": "DPAD_NE", "xy": [-19, -13]},
+      {"index": 5, "name": "LRING_270", "xy": [-46.0, -4.5]},
+      {"index": 6, "name": "LRING_210", "xy": [-60.29, 3.75]},
+      {"index": 7, "name": "LRING_150", "xy": [-60.29, 20.25]},
+      {"index": 8, "name": "LRING_90", "xy": [-46.0, 28.5]},
+      {"index": 9, "name": "LRING_30", "xy": [-31.71, 20.25]},
+      {"index": 10, "name": "LRING_330", "xy": [-31.71, 3.75]},
+      {"index": 11, "name": "VIEW", "xy": [-12, -5.5]},
+      {"index": 12, "name": "HOME", "xy": [0, -5.5]},
+      {"index": 13, "name": "MENU", "xy": [12, -5.5]},
+      {"index": 14, "name": "X", "xy": [40.0, 12]},
+      {"index": 15, "name": "Y", "xy": [46, 18.0]},
+      {"index": 16, "name": "B", "xy": [52.0, 12]},
+      {"index": 17, "name": "A", "xy": [46, 6.0]},
+      {"index": 18, "name": "RRING_30", "xy": [40.29, -11.75]},
+      {"index": 19, "name": "RRING_330", "xy": [40.29, -28.25]},
+      {"index": 20, "name": "RRING_270", "xy": [26.0, -36.5]},
+      {"index": 21, "name": "RRING_210", "xy": [11.71, -28.25]},
+      {"index": 22, "name": "RRING_150", "xy": [11.71, -11.75]},
+      {"index": 23, "name": "RRING_90", "xy": [26.0, -3.5]}
+    ],
+    "ring_led_radius": 16.5
+  }
+}

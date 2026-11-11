@@ -1,0 +1,5 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "kestrel")(type "KiCad")(uri "${KIPRJMOD}/lib/kestrel.pretty")(options "")(descr "Kestrel footprints"))
+	(lib (name "kestrel_easyeda")(type "KiCad")(uri "${KIPRJMOD}/lib/easyeda/kestrel_easyeda.pretty")(options "")(descr "Footprints converted from EasyEDA"))
+)

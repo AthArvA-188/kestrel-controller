@@ -1,0 +1,441 @@
+{
+  "parts": [
+    {
+      "name": "pcb",
+      "printed": false,
+      "material": "fabricated",
+      "volume_mm3": 16488.3
+    },
+    {
+      "name": "esp32_module",
+      "printed": false,
+      "material": "purchased",
+      "volume_mm3": 1468.8
+    },
+    {
+      "name": "usb_c",
+      "printed": false,
+      "material": "purchased",
+      "volume_mm3": 219.8
+    },
+    {
+      "name": "tact_switches",
+      "printed": false,
+      "material": "purchased",
+      "volume_mm3": 1604.4
+    },
+    {
+      "name": "bumper_switch_LB",
+      "printed": false,
+      "material": "purchased",
+      "volume_mm3": 487.4
+    },
+    {
+      "name": "bumper_switch_RB",
+      "printed": false,
+      "material": "purchased",
+      "volume_mm3": 487.4
+    },
+    {
+      "name": "battery",
+      "printed": false,
+      "material": "purchased",
+      "volume_mm3": 24000.0
+    },
+    {
+      "name": "stick_module_L",
+      "printed": false,
+      "material": "purchased",
+      "volume_mm3": 3484.0
+    },
+    {
+      "name": "stick_stem_disc_L",
+      "printed": true,
+      "material": "POM or SLA resin",
+      "volume_mm3": 638.9
+    },
+    {
+      "name": "stick_cap_L",
+      "printed": true,
+      "material": "TPU or SLA resin",
+      "volume_mm3": 977.7
+    },
+    {
+      "name": "stick_plunger_L",
+      "printed": true,
+      "material": "POM or SLA resin",
+      "volume_mm3": 487.5
+    },
+    {
+      "name": "stick_spring_L",
+      "printed": false,
+      "material": "purchased",
+      "volume_mm3": 347.0
+    },
+    {
+      "name": "tension_ring_L",
+      "printed": true,
+      "material": "aluminium or SLA resin",
+      "volume_mm3": 426.7
+    },
+    {
+      "name": "glow_ring_L",
+      "printed": true,
+      "material": "clear resin or translucent PETG",
+      "volume_mm3": 1577.5
+    },
+    {
+      "name": "stick_module_R",
+      "printed": false,
+      "material": "purchased",
+      "volume_mm3": 3484.0
+    },
+    {
+      "name": "stick_stem_disc_R",
+      "printed": true,
+      "material": "POM or SLA resin",
+      "volume_mm3": 638.9
+    },
+    {
+      "name": "stick_cap_R",
+      "printed": true,
+      "material": "TPU or SLA resin",
+      "volume_mm3": 977.7
+    },
+    {
+      "name": "stick_plunger_R",
+      "printed": true,
+      "material": "POM or SLA resin",
+      "volume_mm3": 487.5
+    },
+    {
+      "name": "stick_spring_R",
+      "printed": false,
+      "material": "purchased",
+      "volume_mm3": 347.0
+    },
+    {
+      "name": "tension_ring_R",
+      "printed": true,
+      "material": "aluminium or SLA resin",
+      "volume_mm3": 426.7
+    },
+    {
+      "name": "glow_ring_R",
+      "printed": true,
+      "material": "clear resin or translucent PETG",
+      "volume_mm3": 1577.5
+    },
+    {
+      "name": "button_A",
+      "printed": true,
+      "material": "translucent resin",
+      "volume_mm3": 672.3
+    },
+    {
+      "name": "button_B",
+      "printed": true,
+      "material": "translucent resin",
+      "volume_mm3": 672.3
+    },
+    {
+      "name": "button_X",
+      "printed": true,
+      "material": "translucent resin",
+      "volume_mm3": 672.3
+    },
+    {
+      "name": "button_Y",
+      "printed": true,
+      "material": "translucent resin",
+      "volume_mm3": 672.3
+    },
+    {
+      "name": "dpad",
+      "printed": true,
+      "material": "translucent resin, painted top",
+      "volume_mm3": 3482.5
+    },
+    {
+      "name": "button_VIEW",
+      "printed": true,
+      "material": "translucent resin",
+      "volume_mm3": 218.2
+    },
+    {
+      "name": "button_HOME",
+      "printed": true,
+      "material": "translucent resin",
+      "volume_mm3": 307.0
+    },
+    {
+      "name": "button_MENU",
+      "printed": true,
+      "material": "translucent resin",
+      "volume_mm3": 218.2
+    },
+    {
+      "name": "button_FN",
+      "printed": true,
+      "material": "translucent resin",
+      "volume_mm3": 218.2
+    },
+    {
+      "name": "display_module",
+      "printed": false,
+      "material": "purchased",
+      "volume_mm3": 4621.3
+    },
+    {
+      "name": "display_lens",
+      "printed": false,
+      "material": "laser-cut 1 mm acrylic",
+      "volume_mm3": 1258.2
+    },
+    {
+      "name": "bumper_L",
+      "printed": true,
+      "material": "ABS or resin",
+      "volume_mm3": 2967.0
+    },
+    {
+      "name": "bumper_pin_L",
+      "printed": false,
+      "material": "2 mm steel pin",
+      "volume_mm3": 26.7
+    },
+    {
+      "name": "trigger_L",
+      "printed": true,
+      "material": "ABS or resin",
+      "volume_mm3": 2930.5
+    },
+    {
+      "name": "trigger_magnet_L",
+      "printed": false,
+      "material": "3 x 3 x 2 mm N42",
+      "volume_mm3": 18.0
+    },
+    {
+      "name": "trigger_pin_L",
+      "printed": false,
+      "material": "2 mm steel pin",
+      "volume_mm3": 100.5
+    },
+    {
+      "name": "hall_sensor_L",
+      "printed": false,
+      "material": "purchased",
+      "volume_mm3": 4.6
+    },
+    {
+      "name": "trigger_motor_L",
+      "printed": false,
+      "material": "N20-size DC motor",
+      "volume_mm3": 1800.0
+    },
+    {
+      "name": "trigger_worm_L",
+      "printed": false,
+      "material": "module 0.5 single-start worm",
+      "volume_mm3": 282.7
+    },
+    {
+      "name": "trigger_arm_L",
+      "printed": true,
+      "material": "SLA resin arm on a purchased 20T wheel",
+      "volume_mm3": 345.9
+    },
+    {
+      "name": "trigger_arm_pin_L",
+      "printed": false,
+      "material": "2 mm steel pin",
+      "volume_mm3": 25.1
+    },
+    {
+      "name": "bumper_R",
+      "printed": true,
+      "material": "ABS or resin",
+      "volume_mm3": 2982.1
+    },
+    {
+      "name": "bumper_pin_R",
+      "printed": false,
+      "material": "2 mm steel pin",
+      "volume_mm3": 26.7
+    },
+    {
+      "name": "trigger_R",
+      "printed": true,
+      "material": "ABS or resin",
+      "volume_mm3": 3007.5
+    },
+    {
+      "name": "trigger_magnet_R",
+      "printed": false,
+      "material": "3 x 3 x 2 mm N42",
+      "volume_mm3": 18.0
+    },
+    {
+      "name": "trigger_pin_R",
+      "printed": false,
+      "material": "2 mm steel pin",
+      "volume_mm3": 100.5
+    },
+    {
+      "name": "hall_sensor_R",
+      "printed": false,
+      "material": "purchased",
+      "volume_mm3": 4.6
+    },
+    {
+      "name": "trigger_motor_R",
+      "printed": false,
+      "material": "N20-size DC motor",
+      "volume_mm3": 1800.0
+    },
+    {
+      "name": "trigger_worm_R",
+      "printed": false,
+      "material": "module 0.5 single-start worm",
+      "volume_mm3": 282.7
+    },
+    {
+      "name": "trigger_arm_R",
+      "printed": true,
+      "material": "SLA resin arm on a purchased 20T wheel",
+      "volume_mm3": 345.9
+    },
+    {
+      "name": "trigger_arm_pin_R",
+      "printed": false,
+      "material": "2 mm steel pin",
+      "volume_mm3": 25.1
+    },
+    {
+      "name": "paddle_1",
+      "printed": true,
+      "material": "ABS or resin",
+      "volume_mm3": 748.0
+    },
+    {
+      "name": "paddle_switch_1",
+      "printed": false,
+      "material": "D2FC-type micro switch",
+      "volume_mm3": 488.0
+    },
+    {
+      "name": "paddle_2",
+      "printed": true,
+      "material": "ABS or resin",
+      "volume_mm3": 748.0
+    },
+    {
+      "name": "paddle_switch_2",
+      "printed": false,
+      "material": "D2FC-type micro switch",
+      "volume_mm3": 488.0
+    },
+    {
+      "name": "paddle_3",
+      "printed": true,
+      "material": "ABS or resin",
+      "volume_mm3": 748.0
+    },
+    {
+      "name": "paddle_switch_3",
+      "printed": false,
+      "material": "D2FC-type micro switch",
+      "volume_mm3": 488.0
+    },
+    {
+      "name": "paddle_4",
+      "printed": true,
+      "material": "ABS or resin",
+      "volume_mm3": 748.0
+    },
+    {
+      "name": "paddle_switch_4",
+      "printed": false,
+      "material": "D2FC-type micro switch",
+      "volume_mm3": 488.0
+    },
+    {
+      "name": "rumble_motor_L",
+      "printed": false,
+      "material": "10 x 25 mm ERM",
+      "volume_mm3": 1963.5
+    },
+    {
+      "name": "rumble_motor_R",
+      "printed": false,
+      "material": "10 x 25 mm ERM",
+      "volume_mm3": 1963.5
+    },
+    {
+      "name": "top_shell",
+      "printed": true,
+      "material": "ABS, PETG, or nylon",
+      "volume_mm3": 52591.2
+    },
+    {
+      "name": "bottom_shell",
+      "printed": true,
+      "material": "ABS, PETG, or nylon",
+      "volume_mm3": 76522.6
+    }
+  ],
+  "overall_size_mm": [
+    173.1,
+    130.9,
+    74.0
+  ],
+  "layout_openings_blocked": [],
+  "tension": {
+    "loosest": {
+      "spring_length_mm": 8.8,
+      "spring_force_n": 0.26,
+      "added_force_at_cap_gf": 9.8
+    },
+    "mid": {
+      "spring_length_mm": 7.8,
+      "spring_force_n": 0.73,
+      "added_force_at_cap_gf": 27.7
+    },
+    "tightest": {
+      "spring_length_mm": 6.8,
+      "spring_force_n": 1.2,
+      "added_force_at_cap_gf": 45.5
+    },
+    "plunger_lift_at_full_tilt_mm": 4.48,
+    "spring_length_at_full_tilt_tightest_mm": 2.32,
+    "spring_force_at_full_tilt_tightest_n": 3.3,
+    "spring": "free length 9.3 mm, rate 0.47 N/mm, mean diameter 23.6 mm, 0.5 mm wire",
+    "planned_added_range_gf": [
+      10,
+      46
+    ]
+  },
+  "interference": [],
+  "stick_tilt_contacts": [],
+  "trigger_sweep": [
+    {
+      "trigger": "L",
+      "magnet_gap_at_full_pull_mm": 2.01,
+      "magnet_y_offset_mm": 0.0
+    },
+    {
+      "trigger": "L",
+      "arm_blocks_pull": true
+    },
+    {
+      "trigger": "R",
+      "magnet_gap_at_full_pull_mm": 2.01,
+      "magnet_y_offset_mm": 0.0
+    },
+    {
+      "trigger": "R",
+      "arm_blocks_pull": true
+    }
+  ]
+}
